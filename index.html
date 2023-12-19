@@ -4,10 +4,78 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project: Global Forces</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/09446dd6c3.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./dist/css/style.min.css" />
 	</head>
 
-	<body>
-		Test
+	<body class="landingPage">
+		<nav class="nav">
+			<div class="nav__mobile">
+				<a href="#">factions</a>
+				<a href="#">about</a>
+				<a href="#">how to join</a>
+				<a href="#">mods</a>
+				<a href="#">donate</a>
+
+				<button class="nav__mobile-burgerBtn">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+
+			<div class="nav__settings">
+				<div class="nav__settings-flags">
+					<button class="nav__settings-lang">
+						<img src="./dist/img/eng.png" alt="" />
+					</button>
+
+					<button class="nav__settings-flag">
+						<img src="./dist/img/pl.png" alt="" />
+					</button>
+
+					<button class="nav__settings-flag">
+						<img src="./dist/img/gr.png" alt="" />
+					</button>
+				</div>
+
+				<div class="nav__settings-account">
+					<button class="nav__settings-profile">
+						<i class="fa-regular fa-user"></i>
+					</button>
+
+					<div class="nav__settings-options">
+						<a href="#" class="nav__settings-option">sign in</a>
+
+						<a href="#" class="nav__settings-option">sign up</a>
+
+						<a href="#" class="nav__settings-option">planning</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav__middle">
+				<div class="nav__middle-logo">
+					<img src="./dist/img/logo.png" alt="PGF" />
+				</div>
+
+				<div class="nav__middle-links">
+					<a href="#">factions</a>
+					<a href="#">about</a>
+					<a href="#">how to join</a>
+					<a href="#">mods</a>
+					<a href="#">donate</a>
+				</div>
+			</div>
+		</nav>
+
+		<header></header>
+
+		<main></main>
+
+		<footer></footer>
+
+		<script src="./dist/js/main.min.js"></script>
 	</body>
 </html>
