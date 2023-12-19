@@ -1,4 +1,49 @@
 @use 'colors' as *;
 
 @media (min-width: 576px) {
+	.nav {
+		&__mobile {
+			a {
+				font-size: 1.6rem;
+			}
+
+			&-burgerBtn {
+				right: -50px;
+				font-size: 4rem;
+			}
+		}
+
+		&__settings {
+			button {
+				font-size: 3rem;
+
+				img {
+					width: 42px;
+					height: 24px;
+				}
+			}
+
+			&-flag {
+				&--active1 {
+					transform: translateY(45px);
+				}
+
+				&--active2 {
+					transform: translateY(90px);
+				}
+			}
+
+			&-option {
+				font-size: 1.6rem;
+			}
+		}
+
+		&__middle {
+			&-logo {
+				img {
+					width: 70px;
+				}
+			}
+		}
+	}
 }

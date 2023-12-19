@@ -1,7 +1,63 @@
 @use 'colors' as *;
 
 @media (min-width: 992px) {
+	.nav {
+		&__settings {
+			button {
+				font-size: 4.2rem;
+
+				img {
+					margin-top: 8px;
+					width: 56px;
+					height: 32px;
+				}
+			}
+
+			&-flag {
+				&--active1 {
+					transform: translateY(60px);
+				}
+
+				&--active2 {
+					transform: translateY(120px);
+				}
+			}
+
+			&-option {
+				font-size: 2.2rem;
+			}
+		}
+
+		&__middle {
+			&-logo {
+				img {
+					width: 90px;
+				}
+			}
+
+			&-links {
+				a {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
+	.nav {
+		&__middle {
+			&-logo {
+				img {
+					width: 120px;
+				}
+			}
+
+			&-links {
+				a {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
 }

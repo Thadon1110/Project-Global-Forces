@@ -1,4 +1,49 @@
 @use 'colors' as *;
 
 @media (min-width: 772px) {
+	.nav {
+		&__mobile {
+			display: none;
+		}
+
+		&__settings {
+			button {
+				font-size: 3.8rem;
+
+				img {
+					margin-top: 5px;
+					width: 50.4px;
+					height: 28.8px;
+				}
+			}
+
+			&-option {
+				font-size: 2rem;
+			}
+		}
+
+		&__middle {
+			width: 100%;
+
+			&-logo {
+				img {
+					width: 80px;
+					transition: scale 0.3s;
+
+					&:hover {
+						scale: 1.1;
+					}
+				}
+			}
+
+			&-links {
+				display: block;
+				margin-right: 23px;
+
+				a {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
 }

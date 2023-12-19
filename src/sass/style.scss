@@ -8,6 +8,7 @@ body {
 
 	a {
 		color: $primary;
+		cursor: pointer;
 	}
 }
 
@@ -33,15 +34,14 @@ body {
 		align-items: center;
 		width: 30%;
 		height: 100%;
-		box-shadow: 0px 0px 0px #000;
-		// box-shadow: 0px 0px 5px #000;
 		background-color: $backgroundDarker;
 		transform: translateX(-100%);
-		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, box-shadow 0.2s;
 		z-index: 1005;
 
 		&--active {
 			transform: translateX(0);
+			box-shadow: 0px 0px 5px #000;
 		}
 
 		a {
@@ -55,12 +55,10 @@ body {
 
 		&-burgerBtn {
 			position: absolute;
-			top: 5px;
+			top: 0;
 			right: -40px;
 			padding: 5px;
 			font-size: 3rem;
-			font-weight: 800;
-			font-family: 'Font Awesome 5 Free';
 			background: none;
 
 			i {
@@ -76,9 +74,11 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
+		z-index: 1002;
 
 		button {
-			padding: 10px;
+			padding: 5px;
+			margin: 5px;
 			font-size: 2rem;
 			background: none;
 
@@ -156,6 +156,23 @@ body {
 			transition: transform 0.2s ease-out;
 			transform: translateX(150%);
 
+			&:hover {
+				&::before {
+					width: 90%;
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 0;
+				height: 2px;
+				background-color: #fff;
+				transition: width 0.3s;
+			}
+
 			&:nth-child(1) {
 				margin-top: 0;
 			}
@@ -166,6 +183,12 @@ body {
 
 			&:nth-child(3) {
 				transition-delay: 0.2s;
+
+				&:hover {
+					&::before {
+						width: 100%;
+					}
+				}
 			}
 
 			&--active {
@@ -192,6 +215,32 @@ body {
 
 		&-links {
 			display: none;
+
+			a {
+				position: relative;
+				padding: 5px;
+				margin-left: 8px;
+				margin-right: 8px;
+				text-transform: uppercase;
+
+				&:hover {
+					&::before {
+						width: 90%;
+					}
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 0;
+					height: 2px;
+					background-color: #fff;
+					transition: width 0.3s;
+				}
+			}
 		}
 	}
 }
