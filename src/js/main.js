@@ -32,6 +32,10 @@ const optionsHandler = () => {
 	});
 };
 
+array.forEach(element => {
+	
+});
+
 burgerBtn.addEventListener('click', menuHandler);
 langBtn.addEventListener('click', langHandler);
 profileBtn.addEventListener('click', optionsHandler);

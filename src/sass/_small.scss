@@ -46,4 +46,27 @@
 			}
 		}
 	}
+	.factions {
+		&__heading {
+            &--description {
+				h2 {
+					font-size: 4rem;
+				}
+
+				p {
+					font-size: 1.5rem;
+				}
+			}
+	}
+	.factions__flags {
+		display: flex;
+		flex-direction: column;
+
+		.flag {
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
 }
