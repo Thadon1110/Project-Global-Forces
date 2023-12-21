@@ -245,7 +245,7 @@ body {
 	}
 }
 
-//FACTION
+//FACTIONS
 
 .factions {
 	&__heading {
@@ -282,7 +282,9 @@ body {
 
 		.flag {
 			width: 100%;
+			min-height: 200px;
 			text-align: center;
+			
 			img {
 				height: 135px;
 				width: 200px;
