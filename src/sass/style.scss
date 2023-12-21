@@ -20,9 +20,13 @@ body {
 
 .nav {
 	position: fixed;
-	height: 100%;
+	top: 0;
 	width: 100%;
 	z-index: 999;
+
+	.wrapper {
+		position: relative;
+	}
 
 	&__mobile {
 		position: fixed;
@@ -68,7 +72,7 @@ body {
 	}
 
 	&__settings {
-		position: fixed;
+		position: absolute;
 		top: 2px;
 		right: 5px;
 		display: flex;
@@ -153,8 +157,9 @@ body {
 			font-size: 1.2rem;
 			text-align: right;
 			text-transform: uppercase;
-			transition: transform 0.2s ease-out;
+			transition: transform 0.2s ease-out, opacity 0.2s;
 			transform: translateX(150%);
+			opacity: 0;
 
 			&:hover {
 				&::before {
@@ -193,6 +198,7 @@ body {
 
 			&--active {
 				transform: translateX(0);
+				opacity: 1;
 			}
 		}
 	}
@@ -245,11 +251,18 @@ body {
 	}
 }
 
-//FACTIONS
+// -------------------------------------------------------------------------------------------------
+// Default Section
+
+.defaultSection {
+	margin-top: 25rem;
+}
+
+// -------------------------------------------------------------------------------------------------
+// Factions
 
 .factions {
 	&__heading {
-		margin-top: 20rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -284,7 +297,7 @@ body {
 			width: 100%;
 			min-height: 200px;
 			text-align: center;
-			
+
 			img {
 				height: 135px;
 				width: 200px;

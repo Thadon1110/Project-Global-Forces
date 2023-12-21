@@ -7,6 +7,8 @@ const flagBtn2 = document.querySelector('.nav__settings-flag:nth-child(3)');
 const profileBtn = document.querySelector('.nav__settings-profile');
 const optionsContainer = document.querySelector('.nav__settings-options');
 const options = document.querySelectorAll('.nav__settings-option');
+const navMiddle = document.querySelector('.nav__middle');
+const navMiddleLinks = document.querySelector('.nav__middle-links');
 
 const menuHandler = () => {
 	menu.classList.toggle('nav__mobile--active');
@@ -32,10 +34,17 @@ const optionsHandler = () => {
 	});
 };
 
-array.forEach(element => {
-	
-});
+const navChangeBgc = () => {
+	if (window.scrollY >= 80) {
+		navMiddle.classList.add('nav__middle--scrolled');
+		navMiddleLinks.classList.add('nav__middle-links--scrolled');
+	} else {
+		navMiddle.classList.remove('nav__middle--scrolled');
+		navMiddleLinks.classList.remove('nav__middle-links--scrolled');
+	}
+};
 
 burgerBtn.addEventListener('click', menuHandler);
 langBtn.addEventListener('click', langHandler);
 profileBtn.addEventListener('click', optionsHandler);
+window.addEventListener('scroll', navChangeBgc);

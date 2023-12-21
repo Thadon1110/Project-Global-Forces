@@ -7,23 +7,14 @@
 		}
 
 		&__settings {
-			button {
-				font-size: 3.8rem;
-
-				img {
-					margin-top: 5px;
-					width: 50.4px;
-					height: 28.8px;
-				}
-			}
-
 			&-option {
 				font-size: 2rem;
 			}
 		}
 
 		&__middle {
-			width: 100%;
+			padding-bottom: 12px;
+			transition: transform 0.2s;
 
 			&-logo {
 				img {
@@ -37,12 +28,31 @@
 			}
 
 			&-links {
-				display: block;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
 				margin-right: 23px;
+				padding: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-bottom-left-radius: 24px;
+				border-bottom-right-radius: 24px;
+				transition: box-shadow 0.3s, background-color 0.3s;
 
 				a {
 					font-size: 2rem;
+					text-wrap: nowrap;
 				}
+
+				&--scrolled {
+					box-shadow: 0px 0px 10px #000;
+					background-color: $backgroundDarker;
+				}
+			}
+
+			&--scrolled {
+				transform: translate(-50%, -65%);
 			}
 		}
 	}
