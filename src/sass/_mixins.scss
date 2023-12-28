@@ -1,0 +1,26 @@
+@use 'colors' as *;
+
+@mixin h2XS {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+@mixin h2S {
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+@mixin h2M {
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+@mixin h2L {
+	font-size: 5rem;
+	text-transform: uppercase;
+}
+
+@mixin h2XL {
+	font-size: 6rem;
+	text-transform: uppercase;
+}

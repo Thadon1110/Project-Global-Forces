@@ -14,9 +14,51 @@
 	<body class="landingPage">
 		<!-- @include 'nav.kit' -->
 
-		<header></header>
+		<header class="header">
+			<img src="./dist/img/index.png" alt="" />
 
-		<main></main>
+			<div class="wrapper">
+				<div class="header__title">
+					<h1>Project: Global Forces</h1>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con</p>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="trailer">
+				<div class="wrapper">
+					<iframe
+						class="trailer__video"
+						frameborder="0"
+						src="https://www.youtube.com/embed/L__N7mIZ_50"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					>
+					</iframe>
+				</div>
+			</section>
+
+			<section class="join">
+				<div class="wrapper">
+					<div class="join__title">
+						<h2>join as</h2>
+					</div>
+
+					<div class="join__choices">
+						<div class="join__choice join__choice-left" onclick="window.location='./how-to-join.html';">
+							<h3>a leader</h3>
+							<img src="./dist/img/chris.png" alt="a leader" />
+						</div>
+
+						<div class="join__choice join__choice-right" onclick="window.location='./how-to-join.html';">
+							<h3>a soldier</h3>
+							<img src="./dist/img/zolnierz.png" alt="a soldier" />
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
 		<footer></footer>
 

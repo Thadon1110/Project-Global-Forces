@@ -1,6 +1,50 @@
 @use 'colors' as *;
+@use 'mixins' as *;
 
 @media (min-width: 576px) {
+	.landingPage {
+		.header {
+			&__title {
+				margin-left: 20px;
+				width: 80%;
+
+				h1 {
+					font-size: 4rem;
+				}
+
+				p {
+					font-size: 1.8rem;
+				}
+			}
+		}
+
+		.join {
+			&__title {
+				h2 {
+					@include h2S;
+				}
+			}
+
+			&__choice {
+				h3 {
+					font-size: 2rem;
+				}
+
+				&-left {
+					h3 {
+						right: 20%;
+					}
+				}
+
+				&-right {
+					h3 {
+						left: 20%;
+					}
+				}
+			}
+		}
+	}
+
 	.nav {
 		&__mobile {
 			a {
@@ -48,7 +92,7 @@
 	}
 	.factions {
 		&__heading {
-            &--description {
+			&--description {
 				h2 {
 					font-size: 4rem;
 				}
@@ -57,16 +101,16 @@
 					font-size: 1.5rem;
 				}
 			}
-	}
-	.factions__flags {
-		display: flex;
-		flex-direction: column;
+		}
+		.factions__flags {
+			display: flex;
+			flex-direction: column;
 
-		.flag {
-			p {
-				font-size: 1.5rem;
+			.flag {
+				p {
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}
-}
 }

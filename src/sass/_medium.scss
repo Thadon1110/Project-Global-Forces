@@ -1,6 +1,73 @@
 @use 'colors' as *;
+@use 'mixins' as *;
 
 @media (min-width: 772px) {
+	.landingPage {
+		.header {
+			&__title {
+				width: 80%;
+
+				h1 {
+					font-size: 5rem;
+				}
+
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+
+		.trailer {
+			&__video {
+				margin: 30px;
+			}
+		}
+
+		.join {
+			&__title {
+				h2 {
+					@include h2M;
+				}
+			}
+
+			&__choices {
+				flex-direction: row;
+			}
+
+			&__choice {
+				width: 50%;
+				height: 550px;
+
+				h3 {
+					font-size: 2.4rem;
+				}
+
+				img {
+					margin: 0;
+				}
+
+				&-left {
+					justify-content: flex-end;
+
+					h3 {
+						right: auto;
+						left: 5%;
+					}
+				}
+
+				&-right {
+					justify-content: flex-start;
+					order: 1;
+
+					h3 {
+						left: auto;
+						right: 5%;
+					}
+				}
+			}
+		}
+	}
+
 	.nav {
 		&__mobile {
 			display: none;
@@ -33,9 +100,7 @@
 				justify-content: center;
 				align-items: center;
 				margin-right: 23px;
-				padding: 10px;
-				padding-left: 20px;
-				padding-right: 20px;
+				padding: 0 20px 10px;
 				border-bottom-left-radius: 24px;
 				border-bottom-right-radius: 24px;
 				transition: box-shadow 0.3s, background-color 0.3s;
@@ -52,7 +117,7 @@
 			}
 
 			&--scrolled {
-				transform: translate(-50%, -65%);
+				transform: translate(-50%, -63%);
 			}
 		}
 	}
