@@ -122,6 +122,33 @@
 		}
 	}
 
+	.footer {
+		&__block {
+			width: 21%;
+			margin-top: 1rem;
+
+			&-header {
+				font-size: 2.2rem;
+			}
+
+			&-other {
+				a {
+					font-size: 1.1rem;
+				}
+			}
+		}
+
+		&__desc {
+			width: 35%;
+
+			&-header {
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
 	.factions {
 		&__heading {
 			&--description {

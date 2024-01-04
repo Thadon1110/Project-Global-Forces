@@ -90,6 +90,36 @@
 			}
 		}
 	}
+
+	.footer {
+		.wrapper {
+			flex-direction: row;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+
+		&__block {
+			align-items: flex-start;
+			width: 40%;
+
+			&:not(:first-child) {
+				margin-top: 2.5rem;
+
+				&:nth-child(2) {
+					padding-left: 2rem;
+				}
+			}
+
+			&-other {
+				align-items: flex-start;
+			}
+		}
+
+		&__desc {
+			width: 60%;
+		}
+	}
+
 	.factions {
 		&__heading {
 			&--description {
