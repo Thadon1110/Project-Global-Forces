@@ -74,6 +74,8 @@
 		}
 
 		&__settings {
+			top: 2px;
+
 			&-option {
 				font-size: 2rem;
 			}
@@ -187,6 +189,145 @@
 				p {
 					display: block;
 				}
+			}
+		}
+	}
+
+	.howToJoin {
+		margin-top: 140px;
+
+		&__choices {
+			flex-direction: row;
+			overflow: hidden;
+		}
+
+		&__choice {
+			width: 50%;
+			height: 500px;
+			cursor: pointer;
+			transition: width 0.5s ease-out, transform 0.8s, opacity 0.3s;
+
+			.circle {
+				top: 45px;
+			}
+
+			a {
+				&:hover {
+					transform: translateX(10px);
+				}
+			}
+
+			img {
+				height: 100%;
+			}
+
+			h2,
+			img {
+				transition: scale 0.3s, filter 0.3s, right 0.3s, left 0.3s;
+			}
+
+			&:hover {
+				h2,
+				img {
+					scale: 1.1;
+					filter: drop-shadow(0 0 5px $accent);
+				}
+			}
+
+			&-left {
+				margin-left: 40px;
+
+				.hide {
+					transform: translateX(-200px);
+				}
+
+				.circle {
+					left: -30px;
+				}
+
+				img {
+					right: -5%;
+				}
+			}
+
+			&-right {
+				margin-right: 40px;
+
+				.hide {
+					transform: translateX(200px);
+				}
+
+				.circle {
+					right: -30px;
+				}
+
+				img {
+					left: -5%;
+				}
+			}
+
+			.hide {
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.3s, transform 0.3s;
+			}
+
+			&--actionReavelLeft {
+				width: 100%;
+				cursor: default;
+
+				.hide {
+					opacity: 1;
+					pointer-events: auto;
+					transform: translateX(0);
+				}
+
+				img {
+					right: 0;
+				}
+
+				&:hover {
+					h2,
+					img {
+						scale: 1;
+						filter: drop-shadow(0 0 0 #000);
+					}
+				}
+			}
+
+			&--actionReavelRight {
+				width: 100%;
+				cursor: default;
+
+				.hide {
+					opacity: 1;
+					pointer-events: auto;
+					transform: translateX(0);
+				}
+
+				img {
+					left: 0;
+				}
+
+				&:hover {
+					h2,
+					img {
+						scale: 1;
+						filter: drop-shadow(0 0 0 #000);
+					}
+				}
+			}
+
+			&--actionHideLeft {
+				transform: translateX(-200%);
+				opacity: 0;
+				width: 0;
+			}
+
+			&--actionHideRight {
+				transform: translateX(200%);
+				opacity: 0;
+				width: 0;
 			}
 		}
 	}
