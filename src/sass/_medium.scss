@@ -2,72 +2,6 @@
 @use 'mixins' as *;
 
 @media (min-width: 772px) {
-	.landingPage {
-		.header {
-			&__title {
-				width: 80%;
-
-				h1 {
-					font-size: 5rem;
-				}
-
-				p {
-					font-size: 2rem;
-				}
-			}
-		}
-
-		.trailer {
-			&__video {
-				margin: 30px;
-			}
-		}
-
-		.join {
-			&__title {
-				h2 {
-					@include h2M;
-				}
-			}
-
-			&__choices {
-				flex-direction: row;
-			}
-
-			&__choice {
-				width: 50%;
-				height: 550px;
-
-				h3 {
-					font-size: 2.4rem;
-				}
-
-				img {
-					margin: 0;
-				}
-
-				&-left {
-					justify-content: flex-end;
-
-					h3 {
-						right: auto;
-						left: 5%;
-					}
-				}
-
-				&-right {
-					justify-content: flex-start;
-					order: 1;
-
-					h3 {
-						left: auto;
-						right: 5%;
-					}
-				}
-			}
-		}
-	}
-
 	.nav {
 		&__mobile {
 			display: none;
@@ -151,44 +85,82 @@
 		}
 	}
 
-	.factions {
-		&__heading {
-			&--description {
-				h2 {
+	.landingPage {
+		.header {
+			&__title {
+				width: 80%;
+
+				h1 {
 					font-size: 5rem;
 				}
 
 				p {
-					font-size: 1.8rem;
+					font-size: 2rem;
 				}
 			}
 		}
 
-		.factions__flags {
-			margin-top: 10rem;
-			display: flex;
-			flex-direction: row;
-
-			.polishFlag {
-				margin-top: 0;
+		.trailer {
+			&__video {
+				margin: 30px;
 			}
+		}
 
-			.englandFlag {
-				margin-bottom: 0;
-			}
-
-			.flag {
-				p {
-					display: none;
+		.join {
+			&__title {
+				h2 {
+					@include h2M;
 				}
-				transition: transform 0.5s;
 			}
 
-			.flag:hover {
-				transform: scale(1.1);
-				p {
-					display: block;
+			&__choices {
+				flex-direction: row;
+			}
+
+			&__choice {
+				width: 50%;
+				height: 550px;
+
+				h3 {
+					font-size: 2.4rem;
 				}
+
+				img {
+					margin: 0;
+				}
+
+				&-left {
+					justify-content: flex-end;
+
+					h3 {
+						right: auto;
+						left: 5%;
+					}
+				}
+
+				&-right {
+					justify-content: flex-start;
+					order: 1;
+
+					h3 {
+						left: auto;
+						right: 5%;
+					}
+				}
+			}
+		}
+	}
+
+	.defaultSection {
+		margin-top: 150px;
+
+		&__heading {
+			h2 {
+				font-size: 4rem;
+			}
+
+			p {
+				font-size: 1.8rem;
 			}
 		}
 	}

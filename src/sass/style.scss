@@ -534,58 +534,79 @@ body {
 // Default Section
 
 .defaultSection {
-	margin-top: 25rem;
+	margin-top: 80px;
+
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		text-align: center;
+
+		h2,
+		p {
+			margin: 10px;
+		}
+
+		h2 {
+			font-size: 3rem;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 1.4rem;
+		}
+	}
 }
 
 // -------------------------------------------------------------------------------------------------
 // Factions
 
 .factions {
-	&__heading {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		&--description {
-			text-align: center;
-
-			h2 {
-				font-size: 3rem;
-				margin-bottom: 1.6rem;
-			}
-			p {
-				padding: 2rem;
-				font-size: 1rem;
-			}
-		}
-	}
-
 	&__flags {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		gap: 4rem;
-		margin-top: 5rem;
+		margin: 20px 0 50px;
+	}
 
-		.englandFlag {
-			margin-bottom: 5rem;
-		}
+	&__flag {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 70%;
+		height: 100%;
+		max-width: 250px;
+		margin: 40px;
+		box-shadow: 0 0 20px 4px #000;
+		cursor: pointer;
+		transition: scale 0.3s;
 
-		.flag {
-			width: 100%;
-			min-height: 200px;
-			text-align: center;
-
-			img {
-				height: 135px;
-				width: 200px;
-				object-fit: cover;
-			}
+		&:hover {
+			scale: 1.1;
 
 			p {
-				margin-top: 2rem;
+				top: 120%;
 			}
+		}
+
+		p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 1.4rem;
+			white-space: nowrap;
+			transition: top 0.3s;
+		}
+
+		img {
+			width: 100%;
+			object-fit: cover;
+			z-index: 1;
 		}
 	}
 }
